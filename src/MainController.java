@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 
 /**
- * Created by christianbartram on 6/18/17.
+ * Created by christian bartram on 6/18/17.
  */
 public class MainController {
 	//FXML Objects
@@ -47,6 +47,7 @@ public class MainController {
 
 		//Set the button's state to the AI boolean
 		toggleButton.setSelected(advancedScript);
+
 	}
 
 
