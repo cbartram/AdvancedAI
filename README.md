@@ -3,10 +3,11 @@ AdvancedAI Selection Option for Command and Conquer Generals Zero Hour
 
 ## Features
 - Works on the Mac version of Command and Conquer Generals! 
-- Works with http://www.moddb.com/mods/advanced-ai-mod-for-zero-hour-improved-by-aei/downloads/advanced-ai-mod-098-improved-by-aei-v28 this mod
+- Works with the [ModDB Zero Hour Advanced AI Mod ](http://www.moddb.com/mods/advanced-ai-mod-for-zero-hour-improved-by-aei/downloads/advanced-ai-mod-098-improved-by-aei-v28)
+- No need to download this ModDB Zero Hour AI mod (this script has the mod included)
 - Toggle advanced AI with 1 click and Toggle back to normal with another click! 
 - Auto-detects whether Advanced AI are enabled or not
-- 
+- Well tested to ensure it will work on any and every Mac.
 
 ## How to Use
 This script makes it simple to toggle the Advanced AI modification for Command & Conquer Generals Zero Hour for Mac! So if your getting tired of advanced AI simply run this program and with a click of a button you can revert back to normal AI and vice versa!
