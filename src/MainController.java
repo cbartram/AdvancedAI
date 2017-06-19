@@ -6,7 +6,11 @@ import javafx.scene.paint.Color;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
+import java.io.IOException;
 import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.SecureRandom;
 
 /**
@@ -22,6 +26,10 @@ public class MainController {
 	private static final String CANONICAL_PATH = "/Applications/Command & Conquer Generals Deluxe Edition.app/Contents/GameData/Zero Hour Data/Data/Scripts/";
 	private static final String ABSOLUTE_BACKUP_PATH = "/Applications/Command & Conquer Generals Deluxe Edition.app/Contents/GameData/Zero Hour Data/Data/Scripts/backup/SkirmishScripts.scb";
 	private static final String CANONICAL_BACKUP_PATH = "/Applications/Command & Conquer Generals Deluxe Edition.app/Contents/GameData/Zero Hour Data/Data/Scripts/backup/";
+
+	private static final String ADVANCED_AI_SCRIPT = "zero_hour_scripts/Advanced/SkirmishScripts.scb";
+	private static final String NORMAL_AI_SCRIPT = "zero_hour_scripts/Normal/SkirmishScripts.scb";
+
 
 	private SecureRandom random = new SecureRandom();
 	private boolean advancedScript = false;
@@ -48,25 +56,60 @@ public class MainController {
 		//Set the button's state to the AI boolean
 		toggleButton.setSelected(advancedScript);
 
+		try {
+			setup();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 
 	@FXML
 	private void handleToggleButton(ActionEvent event) {
 
-		//Advanced AI is being turned on
+		//Advanced is being turned on
 		if(toggleButton.isSelected()) {
 			setStateOn();
 
-			System.out.println("Swapping and turning ON advanced ai");
 			swap();
 
 		} else {
 			setStateOff();
 
-			System.out.println("Swapping and turning OFF advanced AI");
 			swap();
 		}
+	}
+
+	private void setup() throws IOException {
+
+		File scripts = new File(PATH);
+		Path p = Paths.get(CANONICAL_BACKUP_PATH);
+		boolean advancedScript = true;
+
+
+		//Create the backups dir if it doesn't Exist
+		if(Files.notExists(p)) {
+			Files.createDirectory(p);
+		}
+
+		if(scripts.exists()) {
+			double size = scripts.length();
+
+			if(size <= 2272629) {
+				advancedScript = false;
+			}
+		}
+
+		//The script in the /scripts in already advanced AI
+		if(advancedScript) {
+			//Move the Non Advanced AI into the backups folder
+			FileUtils.copyFile(new File(NORMAL_AI_SCRIPT),  new File(ABSOLUTE_BACKUP_PATH));
+
+		} else {
+			//Move the Advanced AI into the backups folder
+			FileUtils.copyFile(new File(ADVANCED_AI_SCRIPT), new File(ABSOLUTE_BACKUP_PATH));
+		}
+
 	}
 
 	private void setStateOff() {
