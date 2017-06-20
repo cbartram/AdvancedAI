@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/AdvancedAI1_jar</output-path>
     <root id="archive" name="AdvancedAI1.jar">
       <element id="module-output" name="AdvancedAI1" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/out/production/AdvancedAI/commons-io-2.5.jar" path-in-jar="/" />
+      <element id="library" level="project" name="commons-io-2.51" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.5.jar" path-in-jar="/" />
     </root>
   </artifact>
