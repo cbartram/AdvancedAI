@@ -13,7 +13,7 @@ AdvancedAI Selection Option for Command and Conquer Generals Zero Hour
 ## How to Use
 This script makes it simple to toggle the Advanced AI modification for Command & Conquer Generals Zero Hour for Mac! So if your getting tired of advanced AI simply run this program and with a click of a button you can revert back to normal AI and vice versa!
 
-- Clone this repo
+- Clone this repo (click the big green button that says "Clone or Download"
 - Open the containing folder (Should be Titled `AdvancedAI`)
 - Double click the JAR file (`AdvancedAI1.jar`) to run the program!
 
