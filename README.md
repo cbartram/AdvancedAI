@@ -31,6 +31,8 @@ There are just a few requirements to use this software.
 
 - The Command and Conquer Generals app downloaded from the app store **MUST** be located in the Applications folder on the Mac.
 - This script assumes that **NO** other modifications have been done to the `/scripts` portion of command and conquer generals (modding the INIZH.big file and other files is perfectly fine) if so it could render this software useless
+- If you have modified your `/scripts` folder (i.e. by adding a backup folder with other SkirmishScripts.scb files) ensure that you remove any modifications made to your `/scripts` folder so that it looks like this
+![alt text](https://image.ibb.co/k2LcV5/scripts_folder.png "What your scripts folder should look like")
 - You must know how to clone (download) this repo and double click and run a jar file. Literally you just double click it....
 
 
