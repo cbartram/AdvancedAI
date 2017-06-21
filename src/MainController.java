@@ -62,7 +62,6 @@ public class MainController {
 
 		try {
 			version.setText("Running latest version 2.0.0");
-			exportResource("/zero_hour_scripts/Advanced/SkirmishScripts.scb");
 			setup();
 		} catch(Exception e) {
 			error.setTextFill(Color.web("#fc054f"));
@@ -93,6 +92,7 @@ public class MainController {
 	 * @throws IOException
 	 */
 	private void setup() throws IOException {
+		OutputStream outputStream = null;
 
 		File scripts = new File(PATH);
 		Path p = Paths.get(CANONICAL_BACKUP_PATH);
@@ -112,12 +112,42 @@ public class MainController {
 
 			//The script in the /scripts in already advanced AI
 			if(advancedScript) {
+
+				//Create the Normal File
+				InputStream in = getClass().getResourceAsStream("/Normal/SkirmishScripts.scb");
+
+				File normal = new File("SkirmishScripts.scb");
+				// write the inputStream to a FileOutputStream
+				outputStream = new FileOutputStream(normal);
+
+				int read = 0;
+				byte[] bytes = new byte[1024];
+
+				while ((read = in.read(bytes)) != -1) {
+					outputStream.write(bytes, 0, read);
+				}
+
 				//Move the Non Advanced AI into the backups folder
-				FileUtils.copyFile(new File(NORMAL_AI_SCRIPT),  new File(ABSOLUTE_BACKUP_PATH));
+				FileUtils.copyFile(normal,  new File(ABSOLUTE_BACKUP_PATH));
 
 			} else {
+				//Create the Advanced File
+				InputStream in = getClass().getResourceAsStream("/Advanced/SkirmishScripts.scb");
+
+				File advanced = new File("SkirmishScripts.scb");
+				// write the inputStream to a FileOutputStream
+				outputStream = new FileOutputStream(advanced);
+
+				int read = 0;
+				byte[] bytes = new byte[1024];
+
+				while ((read = in.read(bytes)) != -1) {
+					outputStream.write(bytes, 0, read);
+				}
+
+
 				//Move the Advanced AI into the backups folder
-				FileUtils.copyFile(new File(ADVANCED_AI_SCRIPT), new File(ABSOLUTE_BACKUP_PATH));
+				FileUtils.copyFile(advanced, new File(ABSOLUTE_BACKUP_PATH));
 			}
 		}
 
