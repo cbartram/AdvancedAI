@@ -8,13 +8,21 @@ AdvancedAI Selection Option for Command and Conquer Generals Zero Hour
 - Toggle advanced AI with 1 click and Toggle back to normal with another click! 
 - Auto-detects whether Advanced AI are enabled or not
 - Well tested to ensure it will work on any and every Mac.
+- Auto Setup with a fresh copy of Command and Conquer! (See more in the How to Use section)
 
 ## How to Use
 This script makes it simple to toggle the Advanced AI modification for Command & Conquer Generals Zero Hour for Mac! So if your getting tired of advanced AI simply run this program and with a click of a button you can revert back to normal AI and vice versa!
 
 - Clone this repo
-- Go into the `/out/artifacts/AdvancedAI1_jar` folder
-- Double click the JAR file to run the program
+- Open the containing folder (Should be Titled `AdvancedAI`)
+- Double click the JAR file (`AdvancedAI1.jar`) to run the program!
+
+
+This software automatically handles all the setup it requires! It will auto-detect if you have an AdvancedAI mod installed and create a backup folder within the C&C generals app. The software will then proceed to create either the AdvancedAI mod file you need or the Normal AI mod file you need depending on what it finds in your `/scripts` folder! 
+
+
+At this point the software has everything it needs to toggle the AdvancedAI on or off with the click of a button have fun! Finally a software that "Just works" enjoy!
+
 
 If all goes well you should see a nice little interface to Toggle the AI **Make sure you follow the requirements before playing with the program**
 
@@ -23,7 +31,7 @@ There are just a few requirements to use this software.
 
 - The Command and Conquer Generals app downloaded from the app store **MUST** be located in the Applications folder on the Mac.
 - This script assumes that **NO** other modifications have been done to the `/scripts` portion of command and conquer generals (modding the INIZH.big file and other files is perfectly fine) if so it could render this software useless
-- You must know how to double click and run a jar file. Literally you just double click it....
+- You must know how to clone (download) this repo and double click and run a jar file. Literally you just double click it....
 
 
 ## Version Log
@@ -34,3 +42,8 @@ There are just a few requirements to use this software.
 1.1.0 
 - Added Setup script to ensure your c&c generals app is ready to be used by this software
 - Added Jar file for easy running
+
+1.2.0 
+- Fixed Setup to work anywhere that its run
+- Error logging in the App
+- Comes with both the Advanced & Normal Mod files
