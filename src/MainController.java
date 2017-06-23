@@ -32,9 +32,6 @@ public class MainController {
 	private static final String ABSOLUTE_BACKUP_PATH = "/Applications/Command & Conquer Generals Deluxe Edition.app/Contents/GameData/Zero Hour Data/Data/Scripts/backup/SkirmishScripts.scb";
 	private static final String CANONICAL_BACKUP_PATH = "/Applications/Command & Conquer Generals Deluxe Edition.app/Contents/GameData/Zero Hour Data/Data/Scripts/backup/";
 
-	private static final String ADVANCED_AI_SCRIPT = "zero_hour_scripts/Advanced/SkirmishScripts.scb";
-	private static final String NORMAL_AI_SCRIPT = "zero_hour_scripts/Normal/SkirmishScripts.scb";
-
 	private SecureRandom random = new SecureRandom();
 	private boolean advancedScript = false;
 
