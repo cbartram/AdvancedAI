@@ -15,6 +15,8 @@ This script makes it simple to toggle the Advanced AI modification for Command &
 
 - Clone this repo (click the big green button that says "Clone or Download"
 - Open the containing folder (Should be Titled `AdvancedAI`)
+- Ensure that your `/Scripts` folder found under `/Applications/Command & Conquer Generals Deluxe Edition/Contents/GameData/Zero Hour Data/Data/Scripts` has **Read & Write Permissions** (Select the folder then hit `CMD+i`
+![alt text](https://preview.ibb.co/f4GnF5/read_write.png "Ensure your scripts folder has the correct permissions!")
 - Double click the JAR file (`AdvancedAI1.jar`) to run the program!
 
 
